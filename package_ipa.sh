@@ -28,7 +28,7 @@ if [ -d "${APP}/Frameworks" ];
 then
     mkdir -p "${TEMP_IPA_BUILT}/SwiftSupport"
 
-    for SWIFT_LIB in $(ls -1 ${APP}/Frameworks); do 
+    for SWIFT_LIB in $(ls -1 "${APP}/Frameworks"); do 
         echo "Copying ${SWIFT_LIB}"
         cp "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/${SWIFT_LIB}" "${TEMP_IPA_BUILT}/SwiftSupport"
     done
@@ -37,3 +37,5 @@ fi
 echo "+ zip --symlinks --verbose --recurse-paths ${IPA} ."
 cd "${TEMP_IPA_BUILT}"
 zip --symlinks --verbose --recurse-paths "${IPA}" .
+cd -
+cp "${TEMP_IPA_BUILT}/${IPA}" .
