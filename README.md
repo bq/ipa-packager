@@ -1,7 +1,8 @@
-iOS-Scripting-PackageApplication-Swift-Support
+ipa-packager
 ===
 
-This script packages a signed application in a IPA that contains the SwiftSupport folder with libswiftCore*.dylib
+This script packages a signed application into an IPA that contains the SwiftSupport folder with libswiftCore*.dylib.
+This is needed to deploy an app made with Swift into the AppStore
 
 #Usage
 
