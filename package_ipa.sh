@@ -1,4 +1,22 @@
 #!/bin/bash
+#
+# ipa-packager
+# ============
+# Homepage: https://github.com/bq/ipa-packager
+# 
+# This script packages a signed application into an IPA that contains the SwiftSupport folder with libswiftCore*.dylib. This is needed to deploy an app made with Swift into the AppStore
+#
+# Usage
+# -----
+# Run the script
+#    sh package_ipa.sh /path/to/signed/app /output/ipa/path
+#
+# License
+# -------
+# This script is distributed in terms of LGPL license. See http://www.gnu.org/licenses/lgpl.html for more details.
+#
+
+
 APP="$1"
 IPA="$2"
 TEMP_IPA_BUILT="/tmp/ipabuild"
